@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.animar{
+  animation: animar .4s linear;
+}
+
+body{
+  background-color: #f8f8f8;
+}
+
+
+.ativo{
+  background-color: red;
+  padding: 6px 15px;
+  border-radius: 8px;
+  color: white;
+}
+
+
+@keyframes animar {
+  from{
+    transform: translate3d(0,-100px,0);
+    opacity: 0;
+  }
+  to{
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+
+.animarModal{
+  animation: animarModal .4s linear;
+}
+
+@keyframes animarModal {
+  from{
+    transform: scale(0);
+    opacity: 0;
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animaCart{
+  animation: animaCart .2s linear;
+}
+
+@keyframes animaCart {
+  from{
+    width: 0px;
+  } to{
+    width: 384px;
+  }
+}
