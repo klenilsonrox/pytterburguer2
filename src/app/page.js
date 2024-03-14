@@ -367,7 +367,7 @@ const filtrados = inf.dados.filter(it=>it.categoria===e.target.id)
         <button className="border rounded-md cat px-4 lg:py-2 text-gray-600 font-bold " id="bomboniere" onClick={addAndRemoveAtivo}>Bomboniere</button>
       </div>
 
-      <div className=' max-w-7xl grid-cols-1 grid md:grid-cols-2 mx-auto p-4 gap-8 items-center justify-center mt-[20px] mb-[100px]'>
+      <div className=' max-w-7xl grid-cols-1 grid md:grid-cols-2 mx-auto p-4 gap-8 items-center justify-center mt-[20px] mb-[130px]'>
         {dados.map((item) => (
           <div className=' border rounded-md shadow-sm overflow-hidden flex hover:border-gray-300 cursor-pointer transition-all bg-white' key={item.id} onClick={() => inf.verItem(item)}>
             <img src={item.urlImage} alt="" className=' w-[70px] h-auto md:max-w-[90px] lg:max-w-[160px] lg:max-h-[160px] object-cover' />
