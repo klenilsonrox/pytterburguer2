@@ -11,9 +11,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="!scroll-smooth" >
     <link rel="icon" type="image/x-icon" href="https://cdn.icon-icons.com/icons2/1874/PNG/96/iconfinder-hamburgerfastfoodfastfoodburgerfoodbread-4306476_119931.png"/>
-      <body >
+      <body>
 <DadosProvider>
 
 {children}

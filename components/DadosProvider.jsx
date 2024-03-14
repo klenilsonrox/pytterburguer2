@@ -217,7 +217,7 @@ export const DadosProvider = ({children}) => {
       },
       {
         id: 27,
-        urlImage: "/images/xburger.png",
+        urlImage: "/images/bala.png",
         produto: "Bala",
         descricao: "Bala",
         preco: "0.10",
@@ -225,7 +225,7 @@ export const DadosProvider = ({children}) => {
       },
       {
         id: 28,
-        urlImage: "/images/xburger.png",
+        urlImage: "/images/balagoma.jpg",
         produto: "Bala de Goma",
         descricao: "Bala de Goma",
         preco: "2.00",
@@ -233,7 +233,7 @@ export const DadosProvider = ({children}) => {
       },
       {
         id: 29,
-        urlImage: "/images/xburger.png",
+        urlImage: "/images/bombomouro.png",
         produto: "Bombom ouro branco",
         descricao: "Bombom ouro branco",
         preco: "2.00",
@@ -241,7 +241,7 @@ export const DadosProvider = ({children}) => {
       },
       {
         id: 30,
-        urlImage: "/images/xburger.png",
+        urlImage: "/images/freegels.webp",
         produto: "Fregells",
         descricao: "Fregells",
         preco: "1.50",
@@ -249,7 +249,7 @@ export const DadosProvider = ({children}) => {
       },
       {
         id: 31,
-        urlImage: "/images/xburger.png",
+        urlImage: "/images/halls.jpeg",
         produto: "Halls",
         descricao: "Halls",
         preco: "2.00",
@@ -257,7 +257,7 @@ export const DadosProvider = ({children}) => {
       },
       {
         id: 32,
-        urlImage: "/images/xburger.png",
+        urlImage: "/images/pacoca.webp",
         produto: "Paçoca",
         descricao: "Paçoca",
         preco: "1.00",
@@ -265,7 +265,7 @@ export const DadosProvider = ({children}) => {
       },
       {
         id: 33,
-        urlImage: "/images/xburger.png",
+        urlImage: "/images/pirulito.webp",
         produto: "Pirulito",
         descricao: "Pirulito",
         preco: "1.00",
@@ -289,9 +289,7 @@ export const DadosProvider = ({children}) => {
       setOpenModal(!modal)
       setItemIcart(itemCart)
     }
-
-
-
+    
 
   return (
     <dadosContext.Provider value={{dados,setCart,cart,verItem,itemcart,setItemIcart,modal,setOpenModal}}>

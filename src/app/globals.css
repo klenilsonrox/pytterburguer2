@@ -8,6 +8,7 @@
 
 body{
   background-color: #f8f8f8;
+  scroll-behavior: smooth;
 }
 
 
@@ -16,6 +17,10 @@ body{
   padding: 6px 15px;
   border-radius: 8px;
   color: white;
+}
+
+.custom-toast{
+  border-bottom: 2px red;
 }
 
 
@@ -28,6 +33,13 @@ body{
     transform: translate3d(0,0,0);
     opacity: 1;
   }
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px,1fr));
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .animarModal{
