@@ -160,6 +160,14 @@ const phone = "+5537998362445"
     setContador(contador => contador + 1); // Incrementa o contador
   }
 
+  function menos(){
+    if(contador > 1){
+      setContador(contador => contador - 1); // Incrementa o contador
+    }
+  }
+
+
+
   function diminuir(index) {
     const updatedCart = [...inf.cart];
     updatedCart[index].quantidade--; // Diminui a quantidade do item
@@ -346,7 +354,7 @@ const filtrados = inf.dados.filter(it=>it.categoria===e.target.id)
               <div>
                 <div className="flex flex-wrap flex-col items-start gap-2 md:gap-4">
                   <div className="border px-6 py-1 flex items-center rounded-md justify-between gap-2">
-                    <span className="text-2xl cursor-pointer text-red-600">-</span>
+                    <span className="text-2xl cursor-pointer text-red-600" onClick={menos}>-</span>
                     <span className="font-bold">{contador}</span>
                     <span className="text-2xl text-red-600 cursor-pointer" onClick={aumentar}>+</span>
                   </div>
