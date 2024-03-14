@@ -385,7 +385,7 @@ const filtrados = inf.dados.filter(it=>it.categoria===e.target.id)
 
 
       {inf.cart.length > 0 && checkout && <div className="inset-0 fixed bg-black bg-opacity-30 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="w-screen max-w-md bg-white p-4 rounded-md text-gray-600">
+        <div className="w-screen max-w-md bg-white p-4 rounded-md text-gray-600 max-h-[600px] overflow-y-scroll">
           <h1 className="text-gray-600 text-xl text-center font-semibold border-b py-2">Preencha os dados corretamente</h1>
           <div className="fixed items-center top-0 flex right-0 left-0 justify-center m-2">{error && <p className="text-red-600 font-bold bg-white py-2 px-6 rounded-md">{error}</p> }</div>
           <div className="flex flex-col mt-2">
