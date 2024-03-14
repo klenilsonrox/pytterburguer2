@@ -112,7 +112,7 @@ const dadosClient= encodeURIComponent(dados)
 const obss= encodeURIComponent(observe)
 const produtos= encodeURIComponent(cartItems)
 const infospag= encodeURIComponent(infosPagamento)
-const phone = "+5531992311170"
+const phone = "+5537998362445"
 
           const endereco= {
             nome,
