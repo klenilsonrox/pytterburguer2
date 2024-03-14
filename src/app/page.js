@@ -82,6 +82,7 @@ function page() {
 
     const dados=`
 Nome do Cliente: ${nome}\n    
+*Entrega* : ${opcaoSelecionada==="buscar" ? `cliente vai buscar`:"delivery"}
 ${opcaoSelecionada==="delivery" ? `*Numero:* ${numero}`:""}
 ${opcaoSelecionada==="delivery" ? `*Bairro:* ${bairro}`:""}
 ${opcaoSelecionada==="delivery"  ? `*Complemento*: ${complemento}`:"" }
@@ -90,21 +91,17 @@ ${opcaoSelecionada==="delivery" ? `*Forma de pagamento*: ${pagamento}`:""}
 ${pagamento==="Dinheiro" ? `*Precisa* *de* *troco:*${troco} `:""} 
 "----------------------------------------------------"
 `
-
-
-   const infosPagamento = `
+const infosPagamento = `
 *subTotal* : R$ ${Number(total).toFixed(2)}
 *Taxa R$* : ${Number(opcaoSelecionada==="delivery" ? 3:0).toFixed(2)}
 *total do Pedido R$* : ${Number(total + Number(opcaoSelecionada==="delivery" ? 3:0)).toFixed(2)}
 `
-
-    const cartItems = inf.cart.map((item)=> {
+ const cartItems = inf.cart.map((item)=> {
       return (
 `*Produto* :${item.quantidade} ${item.produto} \n 
 *Preço unitário:* ${item.preco}\n  
 "----------------------------------------------------"
-\n`
-)
+\n`)
 }).join("")
 
     const dadosClient= encodeURIComponent(dados)
@@ -114,13 +111,15 @@ ${pagamento==="Dinheiro" ? `*Precisa* *de* *troco:*${troco} `:""}
 
     window.open(`https://wa.me/${phone}?text=${dadosClient}${produtos}${infospag}`)
     
-    setTimeout(()=>{
-      window.open("/")
-    },2000)
+    fecharSite()
 
   }
 
-
+function fecharSite(){
+  setTimeout(()=>{
+    window.open("/")
+  },2000)
+}
 
 
 
@@ -221,7 +220,9 @@ const filtrados = inf.dados.filter(it=>it.categoria===e.target.id)
     }
   }
 
-  
+  function verificarhorario(){
+    console.log("jjj")
+  }
    
   
 
@@ -261,7 +262,7 @@ const filtrados = inf.dados.filter(it=>it.categoria===e.target.id)
     <button onClick={()=>setIsOpen(false)}>X</button>
   </div>
 
-<div className="h-screen max-h-[460px] overflow-y-scroll flex flex-col gap-2 mb-4">
+<div className="h-screen max-h-[300px] sm:max-h-[460px] overflow-y-scroll flex flex-col gap-2 mb-4">
   {inf.cart.map((it,index)=> (
     <div className="px-2 border-b flex justify-between gap-2 mt-8">
     <div className="flex flex-col border-r pr-2 flex-1 w-screen ">
@@ -296,13 +297,13 @@ const filtrados = inf.dados.filter(it=>it.categoria===e.target.id)
         <div className="fixed inset-0 bg-black backdrop-blur-sm flex items-center justify-center bg-opacity-30 z-30 p-4" id="modalItems" onClick={closeModal}>
           <div className="max-w-lg mx-auto w-screen bg-white rounded-md flex overflow-hidden relative">
           <button className="absolute bg-white rounded-br-lg px-4 flex items-center gap-2 py-2 right-0" onClick={()=>inf.setOpenModal(false)}><IoIosArrowBack /> voltar</button>
-            <img src={inf.itemcart.urlImage} alt={`imagem do ${inf.itemcart.produto}`} className="max-w-[70px] max-h-[70px] lg:max-w-[140px] lg:max-h-[200px] object-cover absolute lg:relative bottom-0 right-0 pl-4 lg:pl-0" />
+            <img src={inf.itemcart.urlImage} alt={`imagem do ${inf.itemcart.produto}`} className="max-w-[80px] w-screen max-h-[80px] lg:max-w-[140px] lg:max-h-[140px] absolute right-0 rounded-tl-md bottom-0  order-4" />
             <div className="p-3 flex flex-col gap-2">
               <h1 className="font-bold text-gray-500">{inf.itemcart.produto}</h1>
               <p className="leading-4 text-gray-500">{inf.itemcart.descricao}</p>
               <p className="text-green-600 font-semibold text-xl">R$ {Number(inf.itemcart.preco).toFixed(2)}</p>
               <div>
-                <div className="flex flex-wrap items-center gap-2 md:gap-4">
+                <div className="flex flex-wrap flex-col items-start gap-2 md:gap-4">
                   <div className="border px-6 py-1 flex items-center rounded-md justify-between gap-2">
                     <span className="text-2xl cursor-pointer text-red-600">-</span>
                     <span className="font-bold">{contador}</span>
