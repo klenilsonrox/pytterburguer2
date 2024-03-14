@@ -83,6 +83,7 @@ function page() {
     const dados=`
 Nome do Cliente: ${nome}\n    
 *Entrega* : ${opcaoSelecionada==="buscar" ? `cliente vai buscar`:"delivery"}
+${opcaoSelecionada==="delivery" ? `*Rua:* ${rua}`:""}
 ${opcaoSelecionada==="delivery" ? `*Numero:* ${numero}`:""}
 ${opcaoSelecionada==="delivery" ? `*Bairro:* ${bairro}`:""}
 ${opcaoSelecionada==="delivery"  ? `*Complemento*: ${complemento}`:"" }
