@@ -1,8 +1,8 @@
 'use client'
 import { FaShoppingCart } from "react-icons/fa";
 import React, { useRef } from 'react'
-import { dadosContext} from './components/dadosProvider'
 import { IoIosArrowBack } from "react-icons/io";
+import { dadosContext } from "../../components/DadosProvider";
 
 
 

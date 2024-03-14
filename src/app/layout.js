@@ -1,7 +1,7 @@
 
 import "./globals.css";
-import { DadosProvider } from "./components/dadosProvider";
-import Footer from "./components/Footer";
+import Footer from "../../components/Footer";
+import { DadosProvider } from "../../components/DadosProvider";
 
 
 export const metadata = {
